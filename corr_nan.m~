@@ -1,0 +1,7 @@
+function out = corr_nan(x,y)
+
+% out = corr_nan(x,y)
+%
+% Same as corr (returns ntaining the pairwise linear
+%   correlation coefficient between each pair of columns in the N-by-P
+%   matrix X.

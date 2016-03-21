@@ -1,0 +1,35 @@
+function area = areadome(dist,radius);
+
+% FUNCTION area = areadome(dist,radius)
+%
+% This function outputs the area on a sphere delimited by a given
+% epicentral distance (dist). It also requires de radius of the spere.
+% Distance should be in degrees.
+
+
+
+
+% For dist <= 90
+if dist > 90;
+    dist1 = dist-90;
+else
+    dist1 = dist;
+end
+
+At = 4*pi*radius^2;         % Sphere area
+h = radius*(1 - sind(90-dist));
+
+area = 2*pi*h*radius;
+
+if dist > 90
+    dist2 = dist-90;
+    h2 = radius - radius*sind(dist2);
+    halfarea = At/2;
+    area2 = halfarea - 2*pi*h2*radius;
+    
+    area = area+area2;
+    
+end
+    
+    
+return    
